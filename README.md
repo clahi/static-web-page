@@ -16,4 +16,4 @@ skills, and projects
 
  ## Architecture
 The following diagram provides a visual representation of the services used in this project and how they are connected. This application uses CloudFront, S3 and CloudWatch metrics.
-![Architecture](architecture/static-web-page.png)
+![Architecture](images/static-web-page.png)
