@@ -1,5 +1,4 @@
 resource "aws_s3_bucket" "web_bucket" {
-#   bucket = "my-web-bucket-adlf34"
   bucket = var.bucket_name
 
   tags = {
