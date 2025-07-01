@@ -5,7 +5,7 @@ locals {
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name              = var.bucket_domain_name
-    origin_access_control_id = aws_cloudfront_origin_access_control.default.id
+    origin_access_control_id = aws_cloudfront_origin_access_control.origin_access_control.id
     origin_id                = local.s3_origin_id
   }
 
@@ -96,7 +96,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 }
 
-resource "aws_cloudfront_origin_access_control" "default" {
+resource "aws_cloudfront_origin_access_control" "origin_access_control" {
   name                              = "example"
   description                       = "Example Policy"
   origin_access_control_origin_type = "s3"
