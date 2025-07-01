@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "web_bucket" {
 resource "aws_s3_bucket_policy" "my-static-website-policy" {
   bucket = aws_s3_bucket.web_bucket.id
   policy = jsonencode({
-    "Version" : "2008-10-17",
+    "Version" : "2012-10-17",
     "Id" : "PolicyForCloudFrontPrivateContent",
     "Statement" : [
       {

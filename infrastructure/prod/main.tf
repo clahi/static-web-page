@@ -22,3 +22,6 @@ module "cloudFront" {
   bucket_domain_name = module.s3.bucket_domain_name
 }
 
+module "cloudwatch_dashboard" {
+  source = "../modules/cloudwatch"
+}
